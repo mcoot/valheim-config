@@ -11,7 +11,7 @@ Then scp in your world from your PC. It is probably in:
 
 But it could also be in `C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds` / `worlds_local`.
 
-Move it onto your VPS, into `/etc/opt/valheim-server/config/worlds_local`.
+Move it onto your VPS, into `/etc/opt/valheim/config/worlds_local`.
 
 Run `docker compose up --detach` in the repo root to start the server.
 

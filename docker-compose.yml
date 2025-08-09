@@ -9,8 +9,8 @@ services:
         -  2457:2457/udp
         -  2458:2458/udp
       volumes:
-        - '/etc/opt/valheim-server/config:/config'
-        - '/etc/opt/valheim-server/data:/opt/valheim'
+        - '/etc/opt/valheim/config:/config'
+        - '/etc/opt/valheim/data:/opt/valheim'
       env_file:
         - './valheim.env'
       restart: unless-stopped
