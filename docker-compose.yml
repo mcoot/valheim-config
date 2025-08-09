@@ -17,7 +17,7 @@ services:
         - SERVER_PUBLIC="false"
         - SERVER_PORT="2456"
       restart: unless-stopped
-      stop_grace_periodd: 2m
+      stop_grace_period: 2m
       cap_add: 
         - SYS_NICE
       deploy:
