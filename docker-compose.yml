@@ -12,7 +12,7 @@ services:
         - '/etc/opt/valheim-server/config:/config'
         - '/etc/opt/valheim-server/data:/opt/valheim'
       env_file:
-        -'./valheim.env'
+        - './valheim.env'
       restart: unless-stopped
       stop_grace_period: 2m
       cap_add: 
