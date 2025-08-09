@@ -6,7 +6,12 @@ Run `install.sh` to configure:
 * Install docker
 * Set up `/etc/opt/valheim` to hold config, world saves/backups and such
 
-Then scp in your world from your PC, from `C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds_local` into `/etc/opt/valheim-server/config/worlds_local`.
+Then scp in your world from your PC. It is probably in:
+`C:\Program Files (x86)\Steam\userdata\56690941\892970\remote\worlds` or `worlds_local`.
+
+But it could also be in `C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds` / `worlds_local`.
+
+Move it onto your VPS, into `/etc/opt/valheim-server/config/worlds_local`.
 
 Run `docker compose up --detach` in the repo root to start the server.
 
