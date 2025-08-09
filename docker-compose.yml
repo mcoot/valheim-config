@@ -1,0 +1,35 @@
+version: '3'
+services:
+  valheim-server:
+      container_name: 'valheim-server'
+      hostname: 'valheim-server'
+      image: 'lloesche/valheim-server:latest'
+      ports:
+        -  2456:2456/udp
+        -  2457:2457/udp
+      volumes:
+        - '/etc/opt/valheim-server/config:/config'
+        - '/etc/opt/valheim-server/data:/opt/valheim'
+      environment:
+        - SERVER_NAME="${SERVER_NAME}"
+        - WORLD_NAME="${WORLD_NAME}"
+        - SERVER_PASS="${SERVER_PASS}"
+        - SERVER_PUBLIC="false"
+        - SERVER_PORT="2456"
+      restart: unless-stopped
+      stop_grace_periodd: 2m
+      cap_add: 
+        - SYS_NICE
+      deploy:
+        resources:
+          limits:
+            memory: 8G
+          reservations:
+            memory: 2G
+
+
+
+
+    # -e SERVER_NAME="My Server" \
+    # -e WORLD_NAME="Neotopia" \
+    # -e SERVER_PASS="secret" \

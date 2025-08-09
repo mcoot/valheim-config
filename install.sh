@@ -1,0 +1,6 @@
+#/usr/bin/env bash
+
+snap install docker
+
+mkdir -p /etc/opt/valheim/config
+mkdir -p /etc/opt/valheim/data
